@@ -1,40 +1,530 @@
+
 <!DOCTYPE html>
 <html lang="sl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pravilnik o zasebnosti - Tarifni semafor</title>
+
+    <title>Pravilnik o zasebnosti – Tarifni semafor</title>
+
+    <meta name="description"
+          content="Pravilnik o zasebnosti za mobilno aplikacijo Tarifni semafor. Informacije o obdelavi podatkov, lokalnem shranjevanju, internetni povezavi in zunanjih storitvah.">
+
+    <meta name="robots" content="index, follow">
+
     <style>
-        body { font-family: Arial, sans-serif; line-height: 1.6; max-width: 800px; margin: 0 auto; padding: 20px; color: #333; }
-        h1 { color: #1a1a1a; border-bottom: 2px solid #eaeaea; padding-bottom: 10px; }
-        h2 { color: #2c3e50; margin-top: 30px; }
-        p, ul { margin-bottom: 15px; }
+        :root {
+            color-scheme: light;
+            --background: #f4f6f8;
+            --surface: #ffffff;
+            --text: #202833;
+            --muted: #667085;
+            --primary: #176b45;
+            --border: #e2e7eb;
+            --notice: #fff8e6;
+            --notice-border: #e8c66a;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background: var(--background);
+            color: var(--text);
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .document {
+            background: var(--surface);
+            padding: 42px 48px;
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04);
+        }
+
+        h1 {
+            margin-top: 0;
+            margin-bottom: 8px;
+            color: var(--primary);
+            font-size: 30px;
+            line-height: 1.25;
+        }
+
+        h2 {
+            margin-top: 38px;
+            margin-bottom: 12px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--border);
+            color: var(--primary);
+            font-size: 21px;
+        }
+
+        h3 {
+            margin-top: 24px;
+            margin-bottom: 8px;
+            font-size: 17px;
+        }
+
+        p {
+            margin: 12px 0;
+        }
+
+        ul {
+            padding-left: 24px;
+        }
+
+        li {
+            margin-bottom: 7px;
+        }
+
+        a {
+            color: var(--primary);
+            overflow-wrap: anywhere;
+        }
+
+        .updated {
+            margin-bottom: 28px;
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        .intro {
+            font-size: 17px;
+        }
+
+        .notice {
+            margin: 24px 0;
+            padding: 16px 18px;
+            background: var(--notice);
+            border-left: 4px solid var(--notice-border);
+            border-radius: 6px;
+        }
+
+        .contact {
+            margin-top: 16px;
+            padding: 18px;
+            background: #f2f7f4;
+            border-radius: 8px;
+        }
+
+        footer {
+            margin-top: 36px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
+            color: var(--muted);
+            font-size: 13px;
+            text-align: center;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                margin: 0 auto;
+                padding: 12px;
+            }
+
+            .document {
+                padding: 25px 20px;
+                border-radius: 10px;
+            }
+
+            h1 {
+                font-size: 25px;
+            }
+
+            h2 {
+                font-size: 19px;
+            }
+        }
     </style>
 </head>
+
 <body>
 
-    <h1>Pravilnik o zasebnosti za mobilno aplikacijo "Tarifni semafor"</h1>
-    <p><strong>Zadnja posodobitev:</strong> november 2026</p>
+<div class="container">
+<main class="document">
 
-    <p>Zasebnost naših uporabnikov nam pomeni zelo veliko. Ta pravilnik o zasebnosti pojasnjuje, kako mobilna aplikacija <strong>Tarifni semafor</strong> (v nadaljevanju: aplikacija) ravna z vašimi podatki med njeno uporabo.</p>
+    <h1>Pravilnik o zasebnosti</h1>
 
-    <h2>1. Zbiranje in obdelava osebnih podatkov</h2>
-    <p>Aplikacija Tarifni semafor je zasnovana tako, da varuje vašo zasebnost. <strong>Aplikacija ne zbira, ne shranjuje, ne obdeluje in ne deli nobenih osebnih, občutljivih ali statističnih podatkov o uporabnikih.</strong> Za uporabo aplikacije ni potrebna registracija, prijava ali vnos kakršnihkoli osebnih podatkov.</p>
+    <p class="updated">
+        Mobilna aplikacija <strong>Tarifni semafor</strong><br>
+        Zadnja posodobitev: 06. november 2026
+    </p>
 
-    <h2>2. Izvor prikazanih podatkov</h2>
-    <p>Aplikacija je izključno informativne narave. Prikazuje izključno javno dostopne podatke, povezane s časovnimi bloki in tarifami omrežnine. Aplikacija te podatke zgolj vizualno organizira in prikazuje uporabniku na prijazen način ter ne spreminja njihove vsebine.</p>
+    <p class="intro">
+        Zasebnost uporabnikov nam je pomembna. Ta pravilnik pojasnjuje,
+        kako mobilna aplikacija Tarifni semafor uporablja podatke,
+        katere informacije se lahko shranjujejo na napravi, kako
+        aplikacija pridobiva javno dostopne podatke ter kaj se zgodi
+        ob uporabi zunanjih spletnih storitev.
+    </p>
 
-    <h2>3. Shranjevanje podatkov na napravi</h2>
-    <p>Morebitne nastavitve aplikacije (npr. izbira temnega/svetlega načina ali prilagojene nastavitve pogleda), ki jih izberete med uporabo, se shranjujejo izključno lokalno v pomnilnik vaše mobilne naprave. Do teh podatkov zunanji strežniki ali razvijalec nimamo dostopa.</p>
+    <h2>1. Upravljavec aplikacije in kontaktni podatki</h2>
 
-    <h2>4. Storitve tretjih oseb</h2>
-    <p>Aplikacija ne vsebuje oglaševalskih mrež, analitičnih orodij tretjih oseb (kot sta npr. Google Analytics ali Firebase Tracking) ali drugih vtičnikov, ki bi v ozadju sledili vaši aktivnosti ali zbirali identifikatorje vaše naprave.</p>
+    <p>
+        Upravljavec aplikacije Tarifni semafor je:
+    </p>
 
-    <h2>5. Spremembe pravilnika o zasebnosti</h2>
-    <p>Ta pravilnik o zasebnosti se lahko občasno posodobi, predvsem v primeru zakonskih sprememb ali uvedbe novih tehničnih funkcij v aplikaciji, ki pa ne bodo vplivale na našo zavezo vaši zasebnosti. Vse spremembe bodo objavljene na tej spletni strani.</p>
+    <div class="contact">
+        <p>
+            <strong>Ime in priimek oziroma naziv:</strong>
+            Primož H.
+        </p>
 
-    <h2>6. Kontaktni podatki</h2>
-    <p>Če imate kakršnakoli vprašanja glede tega pravilnika ali delovanja aplikacije, nas lahko kontaktirate preko elektronske pošte na naslov: <strong>hajsekprimoz@gmail.com</strong>.</p>
+        <p>
+            <strong>Kontaktni e-naslov:</strong>
+            <a href="mailto:hajsekprimoz@gmail.com">
+                hajsekprimoz@gmail.com
+            </a>
+        </p>
+
+        <p>
+            <strong>Naslov oziroma sedež:</strong>
+            3241, Podplat
+        </p>
+    </div>
+
+    <p>
+        Za vprašanja glede tega pravilnika, zasebnosti ali obdelave
+        osebnih podatkov se lahko obrnete na navedeni kontaktni
+        e-naslov.
+    </p>
+
+    <h2>2. Podatki, ki jih aplikacija uporablja</h2>
+
+    <p>
+        Za uporabo aplikacije Tarifni semafor registracija,
+        prijava ali ustvarjanje uporabniškega računa ni potrebno.
+    </p>
+
+    <p>
+        Aplikacija je namenjena predvsem prikazu informacij o
+        časovnih blokih, tarifah omrežnine in drugih javno dostopnih
+        informacijah, povezanih z električno energijo.
+    </p>
+
+    <p>
+        Glede na uporabljene funkcije aplikacije se lahko uporabljajo
+        naslednje kategorije podatkov:
+    </p>
+
+    <ul>
+        <li>
+            javno dostopni podatki o časovnih blokih in tarifah;
+        </li>
+        <li>
+            javno dostopni podatki o cenikih in drugih informacijah
+            s področja električne energije;
+        </li>
+        <li>
+            javno objavljene novice oziroma obvestila;
+        </li>
+        <li>
+            uporabniške nastavitve aplikacije;
+        </li>
+        <li>
+            lokalno shranjeni podatki, potrebni za prikaz vsebine,
+            delovanje gradnikov in obvestil;
+        </li>
+        <li>
+            tehnični podatki, potrebni za vzpostavitev internetne
+            povezave z zunanjimi viri.
+        </li>
+    </ul>
+
+    <p>
+        Aplikacija ne zahteva vnosa imena, naslova, telefonske
+        številke ali e-poštnega naslova za običajno uporabo
+        osnovnih funkcij.
+    </p>
+
+    <h2>3. Pridobivanje javno dostopnih podatkov</h2>
+
+    <p>
+        Aplikacija za prikaz aktualnih informacij uporablja
+        internetno povezavo in pridobiva javno dostopne podatke
+        iz zunanjih virov.
+    </p>
+
+    <p>
+        Med vsebinskimi viri so lahko uradne oziroma javne storitve,
+        povezane z:
+    </p>
+
+    <ul>
+        <li>časovnimi bloki in tarifnimi informacijami;</li>
+        <li>ceniki električne energije in omrežnine;</li>
+        <li>informacijami pristojnih institucij;</li>
+        <li>novicami in obvestili s področja energetike.</li>
+    </ul>
+
+    <p>
+        Aplikacija pridobljene javne podatke uporablja za prikaz
+        informacij uporabniku. Njihova dostopnost in aktualnost
+        sta odvisni tudi od zunanjih ponudnikov podatkov.
+    </p>
+
+    <p>
+        Pri vzpostavljanju internetne povezave lahko zunanji
+        ponudniki storitev obdelujejo tehnične podatke, ki so
+        potrebni za delovanje njihovih strežnikov in storitev.
+        Med takšne podatke lahko sodijo IP-naslov, čas zahteve
+        in tehnični podatki o povezavi.
+    </p>
+
+    <p>
+        Obdelava tehničnih podatkov pri zunanjih ponudnikih
+        poteka v skladu z njihovimi pravili in pogoji uporabe.
+    </p>
+
+    <h2>4. Lokalno shranjevanje podatkov</h2>
+
+    <p>
+        Določene nastavitve in podatki, potrebni za delovanje
+        aplikacije, se lahko shranjujejo lokalno v pomnilniku
+        mobilne naprave.
+    </p>
+
+    <p>To lahko vključuje:</p>
+
+    <ul>
+        <li>nastavitve prikaza aplikacije;</li>
+        <li>izbiro svetlega ali temnega načina;</li>
+        <li>uporabniške nastavitve in izbire;</li>
+        <li>nastavitve obvestil;</li>
+        <li>podatke, potrebne za prikaz in osveževanje gradnikov;</li>
+        <li>lokalno shranjene javne podatke za hitrejši prikaz.</li>
+    </ul>
+
+    <p>
+        Lokalno shranjeni podatki se uporabljajo za delovanje
+        aplikacije na napravi uporabnika.
+    </p>
+
+    <p>
+        Uporabnik lahko podatke aplikacije izbriše prek nastavitev
+        operacijskega sistema Android ali z odstranitvijo aplikacije.
+        Pri tem se lahko izbrišejo tudi lokalno shranjene nastavitve
+        in drugi podatki aplikacije.
+    </p>
+
+    <h2>5. Gradniki, obvestila in opravila v ozadju</h2>
+
+    <p>
+        Aplikacija lahko uporablja gradnike na začetnem zaslonu
+        naprave, da uporabniku omogoči hiter pregled informacij
+        o časovnih blokih in drugih podatkih, ki jih aplikacija
+        prikazuje.
+    </p>
+
+    <p>
+        Za pravilno delovanje gradnikov lahko aplikacija lokalno
+        shranjuje podatke, potrebne za njihov prikaz, in jih
+        občasno osvežuje.
+    </p>
+
+    <p>
+        Aplikacija lahko uporablja tudi obvestila, povezana
+        z njenimi funkcijami. Uporabnik lahko dovoljenja za
+        obvestila upravlja v nastavitvah operacijskega sistema
+        Android in v nastavitvah aplikacije, kjer je to na voljo.
+    </p>
+
+    <p>
+        Opravila v ozadju se lahko uporabljajo za osveževanje
+        javno dostopnih podatkov in zagotavljanje pravilnega
+        delovanja aplikacije.
+    </p>
+
+    <h2>6. Zunanje povezave in storitve tretjih oseb</h2>
+
+    <p>
+        Aplikacija lahko vsebuje povezave do spletnih strani
+        in storitev drugih ponudnikov.
+    </p>
+
+    <p>
+        Med njimi je lahko tudi povezava do kalkulatorja oziroma
+        drugih spletnih storitev Agencije za energijo.
+    </p>
+
+    <p>
+        Zunanji kalkulator Agencije za energijo ni vgrajen del
+        aplikacije Tarifni semafor. Aplikacija uporabnika zgolj
+        preusmeri na zunanjo spletno storitev.
+    </p>
+
+    <p>
+        Ko uporabnik odpre zunanjo povezavo, se njegova naprava
+        poveže neposredno s spletnim mestom drugega ponudnika.
+        Nadaljnja obdelava podatkov je odvisna od pravil zasebnosti
+        in pogojev uporabe tega ponudnika.
+    </p>
+
+    <p>
+        Razvijalec aplikacije ne upravlja zunanjih spletnih strani
+        in ne odgovarja za njihove pravilnike o zasebnosti,
+        varnost ali način obdelave podatkov.
+    </p>
+
+    <h2>7. Analitika, oglaševanje in sledenje</h2>
+
+    <p>
+        Aplikacija ni namenjena prikazovanju vedenjsko prilagojenih
+        oglasov ali spremljanju uporabnikovih navad za oglaševalske
+        namene.
+    </p>
+
+    <p>
+        Informacije o morebitni uporabi analitičnih, diagnostičnih
+        ali drugih knjižnic tretjih oseb so odvisne od dejanske
+        tehnične sestave posamezne različice aplikacije.
+    </p>
+
+    <p>
+        Za podatke, ki jih morebitne zunanje storitve obdelujejo
+        samostojno, veljajo tudi njihovi pravilniki in pogoji.
+    </p>
+
+    <h2>8. Varnost podatkov</h2>
+
+    <p>
+        Aplikacija uporablja mehanizme operacijskega sistema
+        Android za shranjevanje podatkov v zasebnem prostoru
+        aplikacije na napravi uporabnika.
+    </p>
+
+    <p>
+        Uporabnik mora za dodatno zaščito svojih podatkov
+        skrbeti tudi z ustrezno zaščito mobilne naprave,
+        uporabo zaklepanja zaslona in rednim posodabljanjem
+        operacijskega sistema.
+    </p>
+
+    <p>
+        Noben način elektronskega shranjevanja ali prenosa
+        podatkov ne more zagotoviti popolne varnosti v vseh
+        okoliščinah.
+    </p>
+
+    <h2>9. Hramba podatkov</h2>
+
+    <p>
+        Lokalno shranjeni podatki ostanejo na napravi, dokler
+        jih uporabnik ne izbriše, dokler jih ne odstrani
+        operacijski sistem ali dokler jih aplikacija ne
+        nadomesti v okviru svojega običajnega delovanja.
+    </p>
+
+    <p>
+        Javni podatki se lahko začasno hranijo lokalno zaradi
+        hitrejšega prikaza in delovanja aplikacije.
+    </p>
+
+    <p>
+        Morebitni tehnični podatki, ki jih obdelujejo zunanji
+        ponudniki internetnih storitev, se hranijo v skladu
+        z njihovimi pravili in roki hrambe.
+    </p>
+
+    <h2>10. Pravice uporabnikov</h2>
+
+    <p>
+        Kadar se pri uporabi aplikacije obdelujejo osebni podatki,
+        imajo posamezniki pravice, ki jim pripadajo po veljavni
+        zakonodaji o varstvu osebnih podatkov.
+    </p>
+
+    <p>Te pravice lahko glede na okoliščine vključujejo:</p>
+
+    <ul>
+        <li>pravico do dostopa do osebnih podatkov;</li>
+        <li>pravico do popravka netočnih podatkov;</li>
+        <li>pravico do izbrisa podatkov;</li>
+        <li>pravico do omejitve obdelave;</li>
+        <li>pravico do ugovora obdelavi;</li>
+        <li>pravico do prenosljivosti podatkov, kadar so izpolnjeni zakonski pogoji;</li>
+        <li>pravico do vložitve pritožbe pri pristojnem nadzornem organu.</li>
+    </ul>
+
+    <p>
+        Podatke, ki so shranjeni samo lokalno na napravi,
+        lahko uporabnik upravlja neposredno v aplikaciji
+        oziroma prek nastavitev operacijskega sistema Android.
+    </p>
+
+    <p>
+        Za vprašanja glede uveljavljanja pravic se lahko
+        uporabnik obrne na upravljavca prek kontaktnega
+        e-naslova, navedenega v prvem poglavju.
+    </p>
+
+    <p>
+        V Sloveniji je pristojni nadzorni organ za varstvo
+        osebnih podatkov Informacijski pooblaščenec Republike
+        Slovenije.
+    </p>
+
+    <p>
+        Spletna stran nadzornega organa:
+        <a href="https://www.ip-rs.si/"
+           target="_blank"
+           rel="noopener noreferrer">
+            https://www.ip-rs.si/
+        </a>
+    </p>
+
+    <h2>11. Spremembe pravilnika o zasebnosti</h2>
+
+    <p>
+        Ta pravilnik se lahko občasno spremeni ali dopolni,
+        zlasti zaradi sprememb zakonodaje, tehničnih sprememb
+        aplikacije ali uvedbe novih funkcionalnosti.
+    </p>
+
+    <p>
+        Vsaka posodobitev pravilnika bo objavljena na tej
+        spletni strani. Datum zadnje posodobitve je naveden
+        na začetku dokumenta.
+    </p>
+
+    <p>
+        Če bi spremembe vplivale na način obdelave osebnih
+        podatkov, bo pravilnik ustrezno dopolnjen.
+    </p>
+
+    <h2>12. Kontakt</h2>
+
+    <p>
+        Za vprašanja, pripombe ali zahteve v zvezi s tem
+        pravilnikom in zasebnostjo se lahko obrnete na:
+    </p>
+
+    <div class="contact">
+        <strong>Tarifni semafor</strong><br>
+        E-pošta:
+        <a href="mailto:hajsekprimoz@gmail.com">
+            hajsekprimoz@gmail.com
+        </a>
+    </div>
+
+    <footer>
+        &copy; Tarifni semafor – Pravilnik o zasebnosti
+    </footer>
+
+</main>
+</div>
 
 </body>
 </html>
